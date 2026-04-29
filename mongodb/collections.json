@@ -1,0 +1,6 @@
+{
+  "name": "git-push-test",
+  "version": "1.0.0",
+  "description": "Simple test to check git push works",
+  "main": "hello.js"
+}
