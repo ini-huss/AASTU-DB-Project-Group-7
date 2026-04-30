@@ -1,1 +1,246 @@
-finally you should report
+ 
+College of Engineering
+Department of Software Engineering
+
+Database Group Project
+Course code: SWEG2108
+Group members:
+	Ivana Yared------------ETS 0771/17
+	Jije Israel---------------ETS 0775/17
+	Hanan Fedlu-----------ETS 0696/17
+	Ineb Hussen------------ETS 0765/17
+	Hammere Shimelse---ETS 0687/17
+	Helen Tesfaye---------ETS 0721/17
+
+
+Instructor name: 
+Yaynshet M.
+2026 A.Y
+ 
+Project on: 
+	Digitalizing the Ethio-MicroLend organization that works on micro finance and loan management 
+
+
+
+
+
+
+
+
+
+
+
+
+CHAPTER ONE
+
+Background of the organization
+
+The Ethio-MicroLend Microfinance and Loan Management Organization was founded with the primary objective of assisting individuals in communities that are frequently neglected by banks. In contrast to conventional banks that typically require collateral and high credit ratings, this organization prioritizes support for low-income communities, small business proprietors, and families residing in rural areas. It provides small loans, saving options, and educational programs focused on financial literacy. By ensuring these services are easily accessible, the organization enables clients to invest in agriculture, launch their own small enterprises, finance education, and enhance their overall quality of life.
+
+Over the years, the organization has expanded its scope and now serves a wide range of people, including farmers, women entrepreneurs, youth groups, and individuals engaged in informal trade. It offers services such as micro-loans, group lending initiatives, savings accounts, and structured repayment plans. However, it has significant challenges: the organization continues to depend on extensive manual paperwork and has fragmented systems. This has led to considerable issues, including delays in loan applications, difficulties in tracking repayment schedules, and challenges for management in generating timely reports for decision-making and compliance. These obstacles hinder the organization's growth and its ability to meet the rising demand for microfinance services.
+
+To address these issues, the organization has decided to adopt a new digital loan management system. This system will centralize client data, simplify the loan approval process, and provide a clearer overview of repayment statuses. 
+
+
+By integrating traditional (MySQL) and contemporary (MongoDB) database methodologies, the organization can manage structured financial records alongside unstructured data such as customer feedback, scanned loan applications, and training materials. Ultimately, this enhanced system will improve transparency, minimize errors, and facilitate smoother operations, thereby assisting the organization in achieving its mission of promoting financial inclusion.
+
+Statement of problem
+
+The Ethio-MicroLend Microfinance and Loan Management Organization is currently dependent on manual, paper-based processes to oversee its operations. Loan applications are completed using paper forms, repayment schedules are monitored in notebooks or spreadsheets, and savings records are kept separately by various staff members. This disjointed method results in duplicated efforts, frequent mistakes, and delays in service delivery. Clients frequently face extended waiting periods for loan approvals, while staff members find it challenging to resolve records when inconsistencies occur. The absence of a cohesive system complicates the maintenance of accurate and current information across departments.
+
+Another significant issue is the ineffectiveness in tracking loan performance and ensuring repayment compliance. Since repayment schedules are managed manually, loan officers find it difficult to promptly identify overdue accounts or send timely reminders to clients. This increases the risk of loan defaults and undermines the organization’s financial stability. Additionally, management encounters challenges in generating dependable reports for internal decision-making and external regulatory obligations. In the absence of automated tools, the analysis of repayment trends or the assessment of loan program success becomes labor-intensive and susceptible to errors, thereby restricting the organization’s capacity for strategic planning.
+
+Moreover, the organization faces challenges related to scalability and data management as its client base continues to expand. As more borrowers and savers become part of the institution, the number of records increases swiftly, putting a strain on the manual system. Employees are finding it progressively more challenging to handle client histories, monitor multiple loans for each individual, and combine savings with loan repayment information.  If these issues are not resolved, the organization risks falling short of its mission to empower communities through accessible and sustainable financial services.
+
+Objectives
+
+General Objective  
+To create and execute a detailed database system that digitizes and unites the microfinance organization’s loan and savings management operations, guaranteeing efficiency, precision, transparency, and growth potential.
+
+Specific Objectives
+
+	Digitize Client Records – Substitute physical paper documents with a centralized database that safely holds client profiles, loan applications, savings accounts, and repayment histories.
+
+	Integrate Loan and Savings Data – Create an all-encompassing system that connects loan data with savings accounts, facilitating accurate monitoring of client financial actions.
+
+	Automate Loan Processing – Optimize loan approval processes by automating eligibility assessments, loan disbursement records, and repayment schedules.
+
+	Enhance Repayment Monitoring – Use tools to observe repayment deadlines, trigger alerts for overdue accounts, and minimize loan default risks.
+
+	Generate Accurate Reports – Equip management with automated financial reports (e.g., outstanding loans, repayment percentages, savings increases) for informed decision-making and adherence to regulations.
+
+	Support Scalability – Construct the database to accommodate growing numbers of clients and transactions without compromising performance.
+
+	Utilize MySQL and MongoDB – Utilize MySQL for structured financial data (clients, loans, repayments) and MongoDB for semi-structured/unstructured information (loan application documents, client feedback, educational materials).
+
+	Improve Transparency and Accountability – Guarantee that both staff and clients can access accurate current informatiom which fosters trust in the organization.
+
+Scope and Benefits
+
+The Ethio-MicroLender Microfinance and Loan Management Organization encompasses the entire spectrum of microfinance activities, starting from client registration to the disbursement of loans, tracking repayments, and managing savings. This system is designed to serve to both individual borrowers and group lending initiatives, ensuring that every financial transaction is documented in a centralized database. It will merge structured data, including loan amounts, repayment timelines, and savings figures, with unstructured data such as loan application forms, client feedback, and training resources. By using MySQL for relational data and MongoDB for adaptable storage, the organization will efficiently handle a variety of information.
+
+
+The advantages of adopting this system are significant. Firstly, it will eliminate the inefficiencies associated with manual, paper-based processes and fragmented systems, thereby minimizing errors and delays in loan approvals and repayment monitoring. Clients will experience quicker access to financial services, while staff will have more time to focus on other tasks instead of reconciling records. Secondly, the system will improve transparency and accountability by delivering precise , current information accessible to both management and clients. Automated notifications and reminders will aid in decreasing loan defaults, thereby boosting the organization’s financial sustainability.
+
+Lastly, the system will offer long-term scalability and opportunities for innovation. As the organization grows its client base, the database will be equipped to manage increasing transaction volumes without compromising performance. Management will gain from automated reporting tools that enhance decision-making and ensure compliance with regulatory standards. In summary, this project will empower the organization to achieve its goal of uplifting communities through accessible, trustworthy, and sustainable financial solutions.
+
+Methodology and Tools 
+
+The approach taken for this project is a systematic, step-by-step method that aligns with the guidelines for the database project. Initially, the organization's operational challenges were analyzed, emphasizing how loans, repayments, and savings are currently managed through manual paper records and disjointed systems. From this evaluation, the problem statement was established, and objectives were defined to facilitate the design and execution of a digital loan management system. The project then advances through three key phases: database design, implementation, and testing. Each phase builds upon its predecessor to guarantee that the final system is both operational and in line with the organization’s mission.
+
+During the database design phase, entities like Clients, Loans, Repayments, Savings, and Loan Officers are identified, and their interconnections are represented using an Entity-Relationship (ER) diagram. Following this, the logical schema is crafted and normalized up to Boyce-Codd Normal Form (BCNF) to remove redundancy and maintain data integrity. Inputs (such as loan application forms), outputs (like repayment schedules), and reports (including outstanding loan summaries) are developed to meet the organization’s operational requirements. This systematic design guarantees that the system accommodates both present needs and future growth.
+
+MySQL is utilized to manage structured data such as client records, loan specifics, repayment schedules, and savings balances. Meanwhile, MongoDB serves to store semi-structured and unstructured data, including scanned loan application documents, client feedback, and training content. Supportive tools like Google Docs (for collaborative documentation), GitHub (for version control of scripts and code), and Telegram (for team communication) are employed to assure seamless collaboration among team members. Testing is performed with sample data to confirm the accuracy of queries, reports, and system outputs, while any bugs and enhancements are noted for further refinement.
+
+This combination of methodologies and tools ensures that the project provides a strong, effective, and clear loan management system customized for the organization’s requirements.
+
+
+
+
+
+
+
+
+
+
+
+CHAPTER TWO
+
+Entities and Relationship
+Entities:
+	Client (borrowers, savers)
+	Loan (loan details: amount, type, duration, interest rate)
+	Repayment (installments, due dates, payment status)
+	Savings Account (balance, deposits, withdrawals)
+	Loan Officer (staff managing loans)
+	Transaction (records of deposits, withdrawals, repayments)
+Relationships:
+	A Client can have multiple Loans.
+	A Loan is managed by one Loan Officer.
+	A Loan generates multiple Repayments.
+	A Client can have one or more Savings Accounts.
+	A Transaction belongs to either a Loan Repayment or a Savings Account.
+ER Digram
+ 
+Logical Schema
+ 
+Normalization Up To BCNF
+
+1. First Normal Form (1NF)
+All attributes are atomic (no repeating groups, no multi-valued fields).
+Example: FullName, Address, Phone, Email are single values.
+The schema meets the criteria of 1NF.
+
+2. Second Normal Form (2NF)
+Rule: There should be no partial dependency (non-key attributes must rely on the entire primary key).
+Given that all tables possess single-attribute primary keys (ClientID, LoanID, etc.), partial dependency is absent. 
+The schema meets the criteria for 2NF.
+
+3. Third Normal Form (3NF)
+Rule: There should be no transitive dependency (non-key attributes relying on other non-key attributes).
+	Client: Attributes are solely dependent on ClientID. - Loan: Attributes are solely dependent on LoanID.
+	Repayment: Attributes are solely dependent on RepaymentID.
+	Saving Account: Attributes are solely dependent on SavingsID.
+	Transaction: Attributes are solely dependent on TransactionID.
+	Loan Officer: Concern — ClientID was included, but a loan officer should not be dependent on a client. 
+Solution: Eliminate ClientID from the Loan Officer table. The relationship already exists through Loan. 
+Following the correction, the schema meets the criteria for 3NF.
+
+4. Boyce–Codd Normal Form (BCNF)
+Rule: For every functional dependency, must be a superkey.
+Review of dependencies:
+	ClientID → FullName, Address, Phone, Email 
+	LoanID → ClientID, OfficerID, LoanAmount, InterestRate, Duration
+	RepaymentID → LoanID, DueDate, AmountPaid, AmountDue, Status
+	SavingsID → ClientID, Balance, AccountNumber, OpenDate
+	TransactionID → TransactionType, TransactionDate, Amount, LoanID, SavingsID
+	OfficerID → FullName, PhoneNumber, Email
+	No violations are present.
+The schema meets the criteria for BCNF.
+
+5. Final BCNF Schema (Cleaned)
+	Client(ClientID PK, FullName, Address, Phone, Email)
+	Loan(LoanID PK, ClientID FK, OfficerID FK, LoanAmount, InterestRate, Duration)
+	Repayment(RepaymentID PK, LoanID FK, DueDate, AmountPaid, AmountDue, Status)
+	SavingAccount(SavingsID PK, ClientID FK, Balance, AccountNumber, OpenDate)
+	Transaction(TransactionID PK, TransactionType, TransactionDate, Amount, LoanID FK, SavingsID FK)
+	LoanOfficer(OfficerID PK, FullName, PhoneNumber, Email)
+ 
+Inputs, Outputs and Reports
+1. Inputs (Forms)
+They are the data capturing entry points in the system.
+Client Registration Form
+Fields: ClientID, FullName, Address, Phone, Email
+Function: To enlist new clients;
+
+Loan Application Form
+Fields: LoanID, ClientID, OfficerID, LoanAmount, InterestRate, Duration
+Objet: Register requests for car loans and point the responsible employee.
+
+Repayment Form
+Fields: RepaymentID, LoanID, DueDate, AmountPaid, AmountDue, Status 
+ For: Repayment.
+
+Savings Account Form
+Fields: SavingsID, ClientID, AccountNumber, OpenDate, Balance
+Goal: To open and administrate client saving accounts.
+
+ Transaction Form
+Fields: TransactionID, TransactionType, TransactionDate, Amount, LoanID, SavingsID
+Use: For deposit, withdrawal, and loan transactions.
+
+ Loan Officer Form
+Fields: OfficerID, FullName, PhoneNumber, Email
+Use:  Register and manage loan officers.
+
+2. Outputs
+
+The output are as follows in a program: These are the result generated by the system after processing.
+
+Client Profile Output
+- Shows detail about the client such as Full Name, email, phone number etc…
+
+Loan Status Output
+- Displays information about the loan, interest rate and duration.
+
+Repayment Summary Output
+- Presents information on the history of repayments made, due dates and info on whether the payment has been made or not (status)    .
+
+Savings Account Output
+- Displays the current balance of the account and other information of the account such as the account number and open date.
+
+ Transaction Output
+- Allows to view transaction history filtered by client, loan or savings account.
+
+Officer Assignment Output
+- Indicates the loan officer responsible for each loan.
+
+
+3. Reports
+
+They are these management level summaries used for analysis and decision making.
+
+ Client Report
+	 Each client listed alongside his contacts detail.
+
+Loan Portfolio Report
+	Summary of all loans – loan amount, interest rate and duration.
+
+ Repayment Report
+	Unsettled refund payment, overdue fund, repayment ratio.
+
+ Savings Report
+	Total balances in each client in the single accounts, and movement account.
+
+Transaction Report
+	In detail for each transaction (deposit, withdrawal, loan granted).
+
+ Officer Performance Report
+	 Number of loans processed by each officer, repayment rates, satisfaction rate of the clients.
+
+As a conclusion:
+	Inputs which represents Forms is a mechanism to captures raw data.
+	Outputs allow users to know instantly.
+	Reports provide summaries up to the management.
+	They work toward providing the system with efficiency, integrity and decision orientation (by consistency).
+
