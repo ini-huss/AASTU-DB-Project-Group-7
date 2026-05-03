@@ -1,7 +1,6 @@
 Survey Questions 
- 1. Survey Questions
-
-Client Survey
+ 
+   Client Survey
 1. How easy was the registration process in the new system?  
 2. Did the digital loan application reduce waiting time compared to the paper-based process?  
 3. How satisfied are you with the clarity of repayment schedules provided?  
@@ -9,7 +8,7 @@ Client Survey
 5. How confident are you that your savings and loan records are accurate?  
 6. Would you recommend Ethio‑MicroLend’s digital services to others?  
 
-Loan Officer Survey
+   Loan Officer Survey
 1. How effective is the system in reducing paperwork?  
 2. Does the system make it easier to track overdue loans?  
 3. How satisfied are you with the reporting tools?  
@@ -17,7 +16,7 @@ Loan Officer Survey
 5. What challenges do you face when using the system?  
 6. What additional features would you recommend?  
 
-Management Survey
+   Management Survey
 1. How reliable are the automated reports for planning?  
 2. Has the system improved compliance with regulations?  
 3. How effective is the integration of loan and savings data?  
