@@ -1,1 +1,41 @@
-Normalize the diagram 
+Normalization Up To BCNF
+
+1. First Normal Form (1NF)
+All attributes are atomic (no repeating groups, no multi-valued fields).
+Example: Full Name, Address, Phone, Email are single values.
+The schema meets the criteria of 1NF.
+
+2.Second Normal Form (2NF)
+Rule: There should be no partial dependency (non-key attributes must rely on the entire primary key).
+Given that all tables possess single-attribute primary keys (ClientID, LoanID, etc.), partial dependency is absent. 
+The schema meets the criteria for 2NF.
+
+3. Third Normal Form (3NF)
+Rule: There should be no transitive dependency (non-key attributes relying on other non-key attributes).
+Client: Attributes are solely dependent on ClientID. - Loan: Attributes are solely dependent on LoanID.
+Repayment: Attributes are solely dependent on RepaymentID.
+Saving Account: Attributes are solely dependent on SavingsID.
+Transaction: Attributes are solely dependent on TransactionID.
+Loan Officer: Concern — ClientID was included, but a loan officer should not be dependent on a client. 
+Solution: Eliminate ClientID from the Loan Officer table. The relationship already exists through Loan. 
+Following the correction, the schema meets the criteria for 3NF.
+
+4. Boyce–Codd Normal Form (BCNF)
+Rule: For every functional dependency, must be a superkey.
+Review of dependencies:
+ClientID → FullName, Address, Phone, Email 
+LoanID → ClientID, OfficerID, LoanAmount, InterestRate, Duration
+RepaymentID → LoanID, DueDate, AmountPaid, AmountDue, Status
+SavingsID → ClientID, Balance, AccountNumber, OpenDate
+TransactionID → TransactionType, TransactionDate, Amount, LoanID, SavingsID
+OfficerID → FullName, PhoneNumber, Email
+No violations are present.
+The schema meets the criteria for BCNF.
+
+5. Final BCNF Schema (Cleaned)
+Client(ClientID PK, FullName, Address, Phone, Email)
+Loan(LoanID PK, ClientID FK, OfficerID FK, LoanAmount, InterestRate, Duration)
+Repayment(RepaymentID PK, LoanID FK, DueDate, AmountPaid, AmountDue, Status)
+SavingAccount(SavingsID PK, ClientID FK, Balance, AccountNumber, OpenDate)
+Transaction(TransactionID PK, TransactionType, TransactionDate, Amount, LoanID FK, SavingsID FK)
+LoanOfficer(OfficerID PK, FullName, PhoneNumber, Email)
