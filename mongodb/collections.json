@@ -98,6 +98,26 @@
   "DocumentType": "Loan Application",
   "FilePath": "/docs/applications/A010.pdf",
   "SubmissionDate": "2024-02-29"
+},
+{
+  "_id": {
+    "$oid": "69f71efa3d7756ba6cbbaf3d"
+  },
+  "ApplicationID": "A011",
+  "ClientID": "11",
+  "DocumentType": "Loan Application",
+  "FilePath": "/docs/applications/A011.pdf",
+  "SubmissionDate": "2024-02-29"
+},
+{
+  "_id": {
+    "$oid": "69f71efa3d7756ba6cbbaf3d"
+  },
+  "ApplicationID": "A012",
+  "ClientID": "12",
+  "DocumentType": "Loan Application",
+  "FilePath": "/docs/applications/A012.pdf",
+  "SubmissionDate": "2024-02-29"
 }],
   "feedback":[{
   "_id": {
